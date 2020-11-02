@@ -15,7 +15,7 @@
 ##--------------------------------------------------------------------
 
 
-defmodule EmqElixirPlugin.Body do
+defmodule EmqxElixirPlugin.Body do
 
     require Record
 
