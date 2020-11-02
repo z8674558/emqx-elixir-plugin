@@ -17,6 +17,10 @@
 
 defmodule EmqElixirPlugin.Body do
 
+    require Record
+
+    Record.defrecord(:message, Record.extract(:message, from_lib: "emqx/include/emqx.hrl"))
+
     def hook_add(a, b, c) do
         :emqttd_hooks.add(a, b, c)
     end
