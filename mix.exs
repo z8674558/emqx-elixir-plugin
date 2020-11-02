@@ -3,9 +3,9 @@ defmodule EmqElixirPlugin.Mixfile do
 
   def project do
     [
-      app: :emq_elixir_plugin,
+      app: :emqx_elixir_plugin,
       version: "2.3.2",
-      elixir: "~> 1.5-dev",
+      elixir: "~> 1.10",
       start_permanent: Mix.env == :prod,
       deps: deps()
     ]
