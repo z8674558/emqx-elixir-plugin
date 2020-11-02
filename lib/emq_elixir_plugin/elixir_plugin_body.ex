@@ -32,7 +32,7 @@ defmodule EmqxElixirPlugin.Body do
     def load(env) do
         # uncomment the hooks that you want, and implement its callback
         
-        #hook_add(:"message.publish",      &EmqElixirPlugin.Body.on_message_publish/2,     [env])
+        hook_add(:"message.publish",      &EmqElixirPlugin.Body.on_message_publish/2,     [env])
         #hook_add(:"message.delivered",    &EmqElixirPlugin.Body.on_message_delivered/4,   [env])
         #hook_add(:"message.acked",        &EmqElixirPlugin.Body.on_message_acked/4,       [env])
         #hook_add(:"client.connected",     &EmqElixirPlugin.Body.on_client_connected/3,    [env])
@@ -46,7 +46,7 @@ defmodule EmqxElixirPlugin.Body do
     def unload do
         # uncomment the hooks that you want
         
-        #hook_del(:"message.publish",      &EmqElixirPlugin.Body.on_message_publish/2     )
+        hook_del(:"message.publish",      &EmqElixirPlugin.Body.on_message_publish/2     )
         #hook_del(:"message.delivered",    &EmqElixirPlugin.Body.on_message_delivered/4   )
         #hook_del(:"message.acked",        &EmqElixirPlugin.Body.on_message_acked/4       )
         #hook_del(:"client.connected",     &EmqElixirPlugin.Body.on_client_connected/3    )
