@@ -19,7 +19,7 @@ defmodule EmqxElixirPlugin.Body do
     
     require Record    
 
-    Record.defrecord(:message, Record.extract(:message, from_lib: "emqx/include/emqx.hrl"))
+    Record.defrecord(:message, Record.extract(:message, from: "emqx.hrl"))
 
     def hook_add(a, b, c) do
         :emqx_hooks.add(a, b, c)
